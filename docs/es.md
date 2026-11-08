@@ -114,10 +114,11 @@ Una elección tiene siete pasos: preparación, vinculación del teléfono (una v
 flowchart TB
   R["Registro + 3 emisores<br/>verifican identidad, firman a ciegas"] -->|credencial anónima| P["Teléfono del votante<br/>cifra, prueba, firma, envía de forma anónima"]
   R -->|número de emisiones| B
-  P -->|papeletas| B[("Tablón de anuncios (cadena de consorcio)<br/>solo añadir, anclado cada hora")]
+  P -->|papeletas| B["Tablón de anuncios (cadena de consorcio)<br/>solo añadir, anclado cada hora"]
   S["Colegio electoral<br/>papeletas de papel, auditoría de riesgo limitado"] -->|totales en papel| B
   B -->|lectura| D["Segundo dispositivo<br/>anota la huella, audita, busca la papeleta"]
-  B <-->|lectura, escribe pruebas y resultados| T["Custodios (9, umbral 5)<br/>suma homomórfica, solo descifran totales"]
+  B -->|lectura, escribe pruebas y resultados| T["Custodios (9, umbral 5)<br/>suma homomórfica, solo descifran totales"]
+  T --> B
   B -->|lectura| A["Auditores públicos<br/>recalculan todo"]
 ```
 

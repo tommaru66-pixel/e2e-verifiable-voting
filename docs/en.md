@@ -114,10 +114,11 @@ An election has seven steps: preparation, phone binding (once), per-election cre
 flowchart TB
   R["Registrar + 3 issuers<br/>verify identity, blind-sign credentials"] -->|anonymous credential| P["Voter's phone<br/>encrypt, prove, sign, submit anonymously"]
   R -->|issuance counts| B
-  P -->|ballots| B[("Consortium-chain bulletin board<br/>append-only, anchored hourly")]
+  P -->|ballots| B["Consortium-chain bulletin board<br/>append-only, anchored hourly"]
   S["Polling station<br/>paper ballots, risk-limiting audit"] -->|paper totals| B
   B -->|read| D["Second device<br/>record fingerprint, audit, look up ballot"]
-  B <-->|read, write proofs and results| T["Trustees (9, threshold 5)<br/>homomorphic sum, decrypt totals only"]
+  B -->|read, write proofs and results| T["Trustees (9, threshold 5)<br/>homomorphic sum, decrypt totals only"]
+  T --> B
   B -->|read| A["Public auditors<br/>recompute everything"]
 ```
 

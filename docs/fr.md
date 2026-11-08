@@ -114,10 +114,11 @@ Un scrutin compte sept étapes : préparation, association du téléphone (une f
 flowchart TB
   R["Registre + 3 émetteurs<br/>vérifient l'identité, signent en aveugle"] -->|attestation anonyme| P["Téléphone de l'électeur<br/>chiffre, prouve, signe, envoie anonymement"]
   R -->|nombre de délivrances| B
-  P -->|bulletins| B[("Tableau d'affichage (chaîne de consortium)<br/>ajout seul, ancré chaque heure")]
+  P -->|bulletins| B["Tableau d'affichage (chaîne de consortium)<br/>ajout seul, ancré chaque heure"]
   S["Bureau de vote<br/>bulletins papier, audit à risque limité"] -->|totaux papier| B
   B -->|lecture| D["Second appareil<br/>note l'empreinte, audite, retrouve le bulletin"]
-  B <-->|lecture, écrit preuves et résultats| T["Dépositaires (9, seuil 5)<br/>somme homomorphe, ne déchiffrent que les totaux"]
+  B -->|lecture, écrit preuves et résultats| T["Dépositaires (9, seuil 5)<br/>somme homomorphe, ne déchiffrent que les totaux"]
+  T --> B
   B -->|lecture| A["Auditeurs publics<br/>recalculent tout"]
 ```
 
