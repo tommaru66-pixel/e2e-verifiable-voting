@@ -72,3 +72,9 @@ Un diseño de votación orientado a impedir el fraude a gran escala: papeletas f
 | `docs/ko.md` | 한국어 |
 
 The Chinese version is the original; the other versions are translations. If they differ, the Chinese version prevails.
+
+## License / 许可证
+
+© 2026 tommaru66-pixel. This work is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE): you may share and adapt it for any purpose, including commercially, as long as you give appropriate credit and indicate if changes were made.
+
+本作品采用[知识共享署名 4.0 国际许可协议（CC BY 4.0）](LICENSE)：可以为任何目的（包括商业用途）自由转载和改编，但须注明出处，并说明是否做过修改。
